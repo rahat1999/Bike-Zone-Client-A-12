@@ -13,6 +13,7 @@ import useAuth from '../../../Hooks/useAuth';
 import Button from '@mui/material/Button';
 import { NavLink } from 'react-router-dom';
 
+
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
@@ -133,9 +134,9 @@ const BookingModal = () => {
                 <Box sx={{ textAlign: 'center', my: 2 }}>
                     <NavLink style={{ textDecoration: "none" }} to="/ourProducts">
                         <Button
-                            style={{ width: "40%", margin: 'auto' }}
+                            style={{ width: "30%", margin: 'auto' }}
                             variant="contained"
-                            color="warning">
+                            color="primary">
                             Go Back</Button>
                     </NavLink>
                 </Box>

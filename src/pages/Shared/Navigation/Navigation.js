@@ -1,9 +1,12 @@
-
 import React from 'react';
+import ManageAccountsOutlinedIcon from '@mui/icons-material/ManageAccountsOutlined';
+import ProductionQuantityLimitsOutlinedIcon from '@mui/icons-material/ProductionQuantityLimitsOutlined';
+import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
+import AddIcon from '@mui/icons-material/Add';
 import { Container, Nav, Navbar, NavDropdown, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-
+import logo from '../../../images/wesiteLogo.png'
 const Navigation = () => {
     const { user, logOut, isAdmin } = useAuth()
     return (
@@ -11,12 +14,14 @@ const Navigation = () => {
             <Navbar collapseOnSelect expand="lg" bg="black" variant="dark" fixed="top" className="p-3">
                 <Container
                 >
+                    <img
+                        style={{ height: "50px", whith: "50px", }} src={logo} alt="" />
                     <Navbar.Brand href="#home">
                         <b style={{
                             color: 'tomato',
                             fontWeight: 600,
                             textShadow: "1px 1px 1px white"
-                        }}>🏍️ BIKE ZONE </b>
+                        }}>BIKE ZONE </b>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -30,10 +35,17 @@ const Navigation = () => {
                                         user.email && isAdmin ? <div>
                                             <NavDropdown.Divider />
                                             <NavDropdown.Item> <b className="text-centr">👑 Admin</b></NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/managOrders">Manage All Orders</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/manageProducts">Manage Products</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/makeAdmin">Make Admin</NavDropdown.Item>
-                                            <NavDropdown.Item as={Link} to="/addProduct">➕Add a Product</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/managOrders">
+                                                <ManageAccountsOutlinedIcon />
+                                                Manage All Orders</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/manageProducts">
+                                                <ProductionQuantityLimitsOutlinedIcon />
+                                                Manage Products</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/makeAdmin">
+                                                <PersonAddAltOutlinedIcon />
+                                                Make Admin</NavDropdown.Item>
+                                            <NavDropdown.Item as={Link} to="/addProduct">
+                                                <AddIcon />Add a Product</NavDropdown.Item>
                                             <NavDropdown.Divider />
                                             <NavDropdown.Item>
                                                 {user.email && <div className="text-center">
@@ -58,7 +70,6 @@ const Navigation = () => {
                                 </NavDropdown>
                             }
 
-                            <Nav.Link as={Link} to="/ourProducts"><b>About</b></Nav.Link>
                         </Nav>
                         <Nav>
                             {

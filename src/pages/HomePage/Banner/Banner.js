@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { NavLink } from 'react-router-dom';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const bannerBg = {
     background: `url(${banner})`,
     height: "100vh",
@@ -29,7 +30,8 @@ const Banner = () => {
                                     The most exciting Moto bike magazine of all time. digital, free and open-minded. Unbiased moto bike reviews and equipment tests. High quality mtb content.
                                 </Typography>
                                 <NavLink style={{ textDecoration: 'none' }} to="/explore">
-                                    <Button sx={{ my: 4 }} variant="contained" color="warning">Buy now</Button>
+                                    <Button sx={{ my: 4 }} variant="contained" color="warning">
+                                        <ShoppingCartOutlinedIcon /> Buy now</Button>
                                 </NavLink>
                             </Box>
 

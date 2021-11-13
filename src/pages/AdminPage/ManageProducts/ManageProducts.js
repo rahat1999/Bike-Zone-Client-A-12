@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
+import DeleteForeverOutlinedIcon from '@mui/icons-material/DeleteForeverOutlined';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -73,7 +74,7 @@ const ManageProducts = () => {
                                             {products.name}
                                         </Typography>
                                     </CardContent>
-                                    <Button onClick={() => handleProducts(products._id)} variant="contained" color="warning">Delete</Button>
+                                    <Button onClick={() => handleProducts(products._id)} variant="contained" color="warning"> <DeleteForeverOutlinedIcon />Delete</Button>
                                 </Item>
                             </Grid>)
                     }

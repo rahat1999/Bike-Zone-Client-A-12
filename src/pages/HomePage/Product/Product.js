@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CardContent from '@mui/material/CardContent';
 import { NavLink } from 'react-router-dom';
-
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -44,7 +44,8 @@ const Product = ({ product }) => {
                     </CardContent>
 
                     <NavLink style={{ textDecoration: "none" }} to={`/plceOrder/${product._id}`}>
-                        <Button variant="contained" color="warning">Buy now</Button>
+                        <Button variant="contained" color="warning">
+                            <ShoppingCartOutlinedIcon /> Buy now</Button>
                     </NavLink>
 
                 </Item>

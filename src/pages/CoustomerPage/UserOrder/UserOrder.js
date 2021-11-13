@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Table, Button } from 'react-bootstrap';
 import useAuth from '../../../Hooks/useAuth';
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 
 const style = {
     color: 'tomato',
@@ -59,7 +60,7 @@ const UserOrder = () => {
                             <th>Name</th>
                             <th>Products</th>
                             <th className="text-center"> Status</th>
-                            <th className="text-center">Action</th>
+                            <th className="text-center"> Order</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -85,7 +86,7 @@ const UserOrder = () => {
                                     </td>
                                     <td className="text-center">
                                         <Button
-                                            onClick={() => handelOrder(order._id)} variant="danger">Cancle Order</Button>
+                                            onClick={() => handelOrder(order._id)} variant="danger"><CancelOutlinedIcon /> Cancel</Button>
                                     </td>
                                 </tr>)
                         }
