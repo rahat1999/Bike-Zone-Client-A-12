@@ -8,7 +8,7 @@
 
 
 ## About website
-* This website made by React, firebase, react router, node, express, mongodb ;
+* This website made by React.js, firebase, React router, node.js, express, mongoDB;
 * For Desing i use MUI and React Boostrp,React Hook;
 * This website is a Bike Sales Realted Website;
 * Our Website is User Review Based he/She can give Rating.

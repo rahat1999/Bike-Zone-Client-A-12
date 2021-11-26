@@ -132,7 +132,7 @@ const BookingModal = () => {
                     </Grid>
                 </Container>
                 <Box sx={{ textAlign: 'center', my: 2 }}>
-                    <NavLink style={{ textDecoration: "none" }} to="/ourProducts">
+                    <NavLink style={{ textDecoration: "none" }} to="/explore">
                         <Button
                             style={{ width: "30%", margin: 'auto' }}
                             variant="contained"
